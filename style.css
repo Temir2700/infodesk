@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.firstDesc {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.navbar {
+  padding: 25px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #f0f0f0;
+}
+
+.first_section {
+  background-image: url("./img/img_hero.png");
+  background-color: #1c1917;
+}
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+}
+
+.hero .title {
+  color: white;
+  font-size: 51px;
+}
+
+button {
+  color: white;
+  background-color: #1e4dc7;
+  border-radius: 50px;
+  height: 55px;
+  width: 240px;
+}
+
+.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.text-center input {
+  height: 60px;
+  border-radius: 20px;
+  width: 270px;
+}
+
+.feedback {
+  color: white;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 20px;
+}
+
+/* second-section */
+
+.second_section,
+.third_section,
+.fourht_section {
+  background-color: #1c1917;
+}
+
+.about_us {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.about_us h2 {
+  color: #1c63ec;
+  font-size: 40px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.desc span:first-child {
+  margin-bottom: 30px;
+}
+
+.desc span {
+  color: white;
+  font-size: 28px;
+}
+
+.num {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.separator {
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  margin: 0 20px;
+}
+
+.num h1 {
+  margin-top: 10px;
+  color: white;
+  font-size: 70px;
+}
+
+/* third-section */
+
+
+.server {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.server h2 {
+  color: #1c63ec;
+  font-size: 40px;
+}
+
+.brands {
+  margin-top: 100px;
+  gap: 65px;
+  display: flex;
+}
