@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лендинг</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -53,7 +54,7 @@
     </header>
     <section id="section1" class="second_section">
       <div class="container">
-        <div class="about_us">
+        <div data-aos="fade-right" class="about_us">
           <div>
             <h2>О компании</h2>
           </div>
@@ -75,12 +76,12 @@
               <div class="num">
                 <div>
                   <span>Компания существует с 2010 года</span>
-                  <h1>14 лет</h1>
+                  <h1 id="years">0</h1>
                 </div>
                 <div class="separator"></div>
                 <div>
                   <span>Клиентов</span>
-                  <h1>50+</h1>
+                  <h1 id="clients">0+</h1>
                 </div>
               </div>
             </div>
@@ -91,7 +92,7 @@
     </section>
     <section class="third_section">
       <div class="container">
-        <div class="server">
+        <div data-aos="fade-left" class="server">
           <div>
             <h2>Серверное оборудование</h2>
           </div>
@@ -138,7 +139,7 @@
     </section>
     <section class="fourht_section">
       <div class="container">
-        <div class="server">
+        <div data-aos="fade-right" class="server">
           <div>
             <h2>Сетевое оборудование</h2>
           </div>
@@ -186,4 +187,9 @@
       </div>
     </section>
   </body>
+  <script src="./main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
