@@ -186,10 +186,190 @@
         </div>
       </div>
     </section>
+    <section class="five_section">
+      <div class="container">
+        <div class="principles">
+          <div>
+            <h3>Принципы</h3>
+          </div>
+          <div class="principles_right">
+            <div class="principles-item">
+              <div class="principles-item-header">
+                <h4>
+                  Забота о пользователях
+                </h4>
+                <span>
+                  01
+                </span>
+              </div>
+              <p>
+                Мы готовы адаптировать наши предложения под ваши индивидуальные требования. Каждая компания имеет свои особенности и уникальные потребности, поэтому мы готовы предложить решения, которые соответствуют вашим целям и бюджету.
+              </p>
+            </div>
+            <div class="principles-item">
+              <div class="principles-item-header">
+                <h4>
+                  Клиентоориентированный подход
+                </h4>
+                <span>
+                  02
+                </span>
+              </div>
+              <p>
+                Мы ценим каждого клиента и стремимся предоставить высокий уровень сервиса. Мы готовы адаптировать наши предложения под ваши индивидуальные требования и потребности.              </p>
+            </div>
+            <div class="principles-item">
+              <div class="principles-item-header">
+                <h4>
+                  Качество и надежность
+                </h4>
+                <span>
+                  03
+                </span>
+              </div>
+              <p>
+                Мы работаем только с проверенными поставщиками, чтобы гарантировать высокое качество оборудования. Все оборудование проходит тщательную проверку перед поставкой, чтобы обеспечить его надежность и долговечность.              </p>
+            </div>
+            <div class="principles-item">
+              <div class="principles-item-header">
+                <h4>
+                  Экспертное консультирование
+                </h4>
+                <span>
+                  04
+                </span>
+              </div>
+              <p>
+                Наша команда специалистов имеет глубокие знания в области серверной и сетевой инфраструктуры. Мы можем помочь вам выбрать оптимальное оборудование и разработать наиболее эффективные решения для вашей компании.              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="six_section">
+      <div class="container">
+        <div class="promo">
+          <img src="./img/img_promo.png" alt="promo"/>
+          <div class="promo_text_left">
+            Мы ценим каждого клиента и стремимся предоставить высокий уровень сервиса
+          </div>
+          <div class="promo_text_right">
+            В состав наших экспертов входят опытные IT специалисты в области разработки ПО
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="seven_section">
+      <div class="container">
+        <div class="application">
+          <div>
+            <h3>Оставить заявку</h3>
+          </div>
+          <div class="application_right">
+            <form id="contactForm" class="contactForm">
+              <h2>Контактные данные</h2>
+              <div>
+                <input type="text" id="name" required placeholder=" ">
+                <label class="label" for="name">Ваше имя*</label>
+                  
+              </div>
+              <div>
+                <input type="tel" id="phone" required placeholder=" ">
+                  <label class="label" for="phone">Телефон*</label>
+                  
+              </div>
+              <div>
+                <input type="email" id="email" required placeholder=" ">
+                  <label class="label" for="email">E-mail*</label>
+                  
+              </div>
+              
+              <div>
+                <input class="input_comments" type="text" id="comments" placeholder=" ">
+                <label class="label" for="comments">Ваше сообщение</label>
+                  
+              </div>
+              <button 
+              type="submit" 
+              
+              id="submitBtn" disabled>Отправить</button>
+          </form>
+          <p class="application_text">Нажимая на кнопку, вы даете
+            <a href="#">согласие</a> на обработку персональных данных и соглашаетесь с 
+            <a href="#">политикой конфиденциальности</a> 
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_inner">
+          <div>
+            <h3>Связаться с нами</h3>
+            <div class="footer_inner_txt">
+              Оставьте заявку или напишите нам в мессенджерах
+            </div>
+            <div>
+              <button class="wp_btn">WhatsApp</button>
+              <button class="tg_btn">Telegram</button>
+            </div>
+          </div>
+          <div>
+            <ul class="footer_list">
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Продукты</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer_info">
+            <div class="footer_item">
+              <p>Телефон</p>
+              <div>+996 500 580420</div>
+            </div>
+            <div class="footer_item">
+              <p>E-mail</p>
+              <div>infodeskllc@yandex.ru</div>
+            </div>
+            <div class="footer_item footer_item_last">
+                Кыргызская Республика, 720010, г. Бишкек, ул. Табышалиева, 1-4
+              
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          2024 © Все права защищены
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./main.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+    document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const requiredFields = form.querySelectorAll('input[required]');
+
+            requiredFields.forEach(field => {
+                field.addEventListener('input', () => {
+                    const allFilled = Array.from(requiredFields).every(input => input.value.trim() !== '');
+                    submitBtn.disabled = !allFilled;
+                });
+            });
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                alert('Форма отправлена!');
+                // Add form submission logic here
+            });
+     });
   </script>
 </html>
