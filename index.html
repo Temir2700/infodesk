@@ -249,7 +249,8 @@
     <section class="six_section">
       <div class="container">
         <div class="promo">
-          <img src="./img/img_promo.png" alt="promo"/>
+          <img src="./img/img_promo.png" alt="promo" class="promo_img"/>
+          <img src="./img/img_promo_mini.png" alt="promo" class="promo_img_mini"/>
           <div class="promo_text_left">
             Мы ценим каждого клиента и стремимся предоставить высокий уровень сервиса
           </div>
@@ -270,8 +271,7 @@
               <h2>Контактные данные</h2>
               <div>
                 <input type="text" id="name" required placeholder=" ">
-                <label class="label" for="name">Ваше имя*</label>
-                  
+                <label class="label" for="name">Ваше имя*</label> 
               </div>
               <div>
                 <input type="tel" id="phone" required placeholder=" ">
@@ -287,12 +287,12 @@
               <div>
                 <input class="input_comments" type="text" id="comments" placeholder=" ">
                 <label class="label" for="comments">Ваше сообщение</label>
-                  
               </div>
               <button 
               type="submit" 
               
-              id="submitBtn" disabled>Отправить</button>
+              id="submitBtn" 
+              disabled>Отправить</button>
           </form>
           <p class="application_text">Нажимая на кнопку, вы даете
             <a href="#">согласие</a> на обработку персональных данных и соглашаетесь с 
@@ -311,8 +311,11 @@
               Оставьте заявку или напишите нам в мессенджерах
             </div>
             <div>
-              <button class="wp_btn">WhatsApp</button>
-              <button class="tg_btn">Telegram</button>
+              <button 
+              class="wp_btn">WhatsApp</button>
+              <button 
+              class="tg_btn">Telegram</button>
+              
             </div>
           </div>
           <div>
@@ -337,22 +340,54 @@
               <p>E-mail</p>
               <div>infodeskllc@yandex.ru</div>
             </div>
-            <div class="footer_item footer_item_last">
+            <div class="footer_item">
+              <p>Адрес</p>
+              <div>
                 Кыргызская Республика, 720010, г. Бишкек, ул. Табышалиева, 1-4
-              
+              </div>
             </div>
           </div>
         </div>
         <div class="footer_bottom">
-          2024 © Все права защищены
+          <span id="year"></span> © Все права защищены
         </div>
       </div>
     </footer>
+    <div id="customAlert" class="custom_alert">
+      <div class="custom_alert_inner">
+        <div class="custom_alert_header">
+          <button onclick="closeAlert()" id="closeAlertButton">X</button>
+        </div>
+        <div class="custom_alert_txt">
+          Спасибо за вашу заявку!
+        </div>
+        <div class="custom_alert_txt_mini">
+          Мы свяжемся с вами в ближайшее время
+        </div>
+      </div>
+    </div>
   </body>
   <script src="./main.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    const showAlert = () => {
+      document.getElementById('customAlert').classList.add('open');
+    }
+
+    // JavaScript function to close the alert
+    function closeAlert () {
+      document.getElementById('customAlert').classList.remove('open');
+    }
+
+    // Attach the showAlert function to the button
+
+    // Attach the closeAlert function to the close button
+    document.getElementById('closeAlertButton').onclick = closeAlert();
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
     document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('contactForm');
             const submitBtn = document.getElementById('submitBtn');
@@ -367,9 +402,10 @@
 
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
-                alert('Форма отправлена!');
+                showAlert();
                 // Add form submission logic here
             });
      });
+
   </script>
 </html>

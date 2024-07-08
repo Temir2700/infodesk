@@ -225,6 +225,9 @@ button {
   margin-bottom: 20px;
   padding-bottom: 15px;
 }
+.principles-item:last-child {
+  border-bottom: 1px solid transparent;
+}
 .principles-item-header {
   display: flex;
   justify-content: space-between;
@@ -458,4 +461,223 @@ button {
   font-size: 14px;
   line-height: 20px;
   color: #EBEBEB;
+}
+.promo_img_mini {
+  display: none;
+}
+.custom_alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Ensure it's not clickable when hidden */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.custom_alert.open {
+  display: flex;
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Allow interaction */
+ }
+.custom_alert_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1C1917;
+  max-width: 410px;
+  height: 410px;
+  flex-direction: column;
+  align-items: center;
+  border-top: none;
+  padding: 30px 40px;
+  border-radius: 50px;
+}
+.custom_alert_header {
+  align-self: flex-end;
+}
+.custom_alert_txt {
+  color: #EBEBEB;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0;
+  text-align: center;
+}
+.custom_alert_txt_mini {
+  color: #EBEBEB;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+.custom_alert_inner button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #EBEBEB;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1050px){ 
+  .principles-item-header h4 {
+    font-size: 25px;
+  }
+
+  .principles h3 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .about_us h2,
+  .server h2 ,
+  .application h3,
+  .footer_inner h3 {
+    font-size: 30px;
+  }
+  .footer_inner_txt {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .promo_text_left {
+    font-size: 20px;
+  }
+  .application_right {
+    width: 100%;
+  }
+  .application  {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contactForm  {
+    max-width: 100%;
+  }
+  .contactForm button {
+    margin: 0 auto;
+  }
+  .application_text {
+    text-align: center;
+  }
+  .principles_right {
+    width: 100%;
+  }
+  .wp_btn,
+  .tg_btn {
+    color: transparent;
+    font-size: 0;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: initial;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .tg_btn{
+    background-image: url("./img/tg-icon.svg");
+  }
+  .wp_btn{
+    background-image: url("./img/wp-icon.svg");
+  }
+  .footer_inner{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about_us h2,
+  .server h2 ,
+  .principles h3,
+  .application h3,
+  .footer_inner h3 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .principles-item-header h4 {
+    font-size: 16px;
+  }
+  .application_text  {
+    font-size: 13px;
+  }
+  .principles-item-header span {
+    display: none;
+  }
+  .promo_text_left,
+  .promo_img {
+    display: none;
+  }
+  .promo_img_mini {
+    display: block;
+    width: 100%;
+  }
+  .promo_text_right {
+    left: 40px;
+    right: 0;
+    bottom: 0;
+    top: 150px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .promo_text_right {
+    top: 70px;
+    font-size: 10px;
+    width: 154px;
+    line-height: 13px;
+  }
+  .contactForm {
+    padding-left: 0;
+  }
+  .application {
+    justify-content: baseline;
+    align-items: baseline;
+  }
+  
+  .contactForm button {
+    width: 100%;
+    margin: initial;
+  }
+  .application_text {
+    text-align: left;
+  }
+  .footer_inner{
+    align-items: initial;
+    justify-content: initial;
+    text-align: initial;
+  }
+  .footer_inner_txt {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer_list {
+    display: none;
+  }
+  .footer_item p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .footer_item div,
+  .footer_item_last {
+    font-size: 16px;
+  }
+  .footer_item  {
+    margin-bottom: 20px;
+  }
+  .footer_bottom {
+    margin-top: 30px;
+  }
 }
