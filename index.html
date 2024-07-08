@@ -356,7 +356,7 @@
     <div id="customAlert" class="custom_alert">
       <div class="custom_alert_inner">
         <div class="custom_alert_header">
-          <button onclick="closeAlert()" id="closeAlertButton">X</button>
+          <button  id="closeAlertButton">X</button>
         </div>
         <div class="custom_alert_txt">
           Спасибо за вашу заявку!
@@ -374,16 +374,13 @@
 
     const showAlert = () => {
       document.getElementById('customAlert').classList.add('open');
-    }
+    };
 
-    // JavaScript function to close the alert
-    function closeAlert () {
+    const closeAlert  = () => {
+      console.log('here');
       document.getElementById('customAlert').classList.remove('open');
-    }
+    };
 
-    // Attach the showAlert function to the button
-
-    // Attach the closeAlert function to the close button
     document.getElementById('closeAlertButton').onclick = closeAlert();
 
     document.getElementById("year").innerHTML = new Date().getFullYear();
@@ -407,5 +404,6 @@
             });
      });
 
+     document.getElementById('closeAlertButton').onclick = closeAlert;
   </script>
 </html>
