@@ -22,13 +22,14 @@ body {
 }
 
 .firstDesc {
-  color: white;
+  color: #EBEBEB;
   font-size: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   height: 100%;
-  margin-top: 20px;
+  margin: 20px 0;
+  line-height: 20px;
 }
 
 .navbar {
@@ -96,34 +97,9 @@ body {
   margin: 4px 0;
 }
 
-@media (max-width: 768px) {
-  .navbar #nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar #nav-links.active {
-    display: flex;
-  }
-
-  .navbar .contact-button {
-    display: none;
-  }
-
-  .menu-icon {
-    display: flex;
-  }
-}
 
 .second_section {
-  padding: 100px 10px;
-  min-height: 100vh;
+  margin: 50px 0;
   background-color: #f2f2f2;
 }
 
@@ -132,56 +108,82 @@ body {
 }
 
 .first_section {
-  background-image: url("./img/img_hero.png");
-  background-color: #1c1917;
+  /* background-image: url("./img/img_hero.svg"); */
+  /* background-color: #1c1917; */
 }
 
 .hero {
-  height: 100vh;
+  padding: 100px 0;
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   /* text-align: center; */
 }
 
 .hero .title {
+  text-transform: uppercase;
+  text-align: end;
   color: white;
   font-size: 51px;
+  margin-bottom: 40px;
 }
 
 button.submit-btn {
   color: white;
   background-color: #1e4dc7;
   border-radius: 50px;
-  height: 55px;
+  height: 48px;
   width: 240px;
   border: none;
   cursor: pointer;
+  background-image: url(./img/arrow.svg);
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+  background-size: 25px;
 }
 
 .text-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
+  width: 475px;
+  border-radius: 50px;
+  background-color: #27272B;
+  padding: 5px;
+  margin: 40px auto 0;
 }
 
-.text-center input {
-  height: 60px;
+.phone-input {
   border-radius: 20px;
   width: 270px;
+  background-color: transparent;
+  color: 
+  #9A9A9A;
+  padding-left: 20px;
+  border: none;
+}
+.phone-input:-webkit-autofill,
+.phone-input:-webkit-autofill:hover,
+.phone-input :-webkit-autofill:focus {
+  border: none;
+  border-bottom: 1px solid #9d9d9d;
+  -webkit-text-fill-color: #e9e9e9;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.phone-input:focus-visible{
+  outline: none;
 }
 
 .feedback {
-  color: white;
+  color: #EBEBEB;
   font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 button {
@@ -204,19 +206,20 @@ button {
 
 .about_us {
   display: flex;
-  justify-content: space-around;
-  padding: 20px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 40px 0;
 }
 
 .about_us h2 {
   color: #1c63ec;
   font-size: 40px;
+  width: 328px;
 }
 
 .desc {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
 }
 
 .desc span:first-child {
@@ -224,7 +227,7 @@ button {
 }
 
 .desc span {
-  color: white;
+  color: #EBEBEB;
   font-size: 28px;
 }
 
@@ -253,39 +256,49 @@ button {
   display: flex;
   margin-top: 70px;
   gap: 30px;
+  flex-wrap: wrap;
 }
-
+.first_img img {
+  width: 300px;
+  border-radius: 50px;
+}
 /* third-section */
 
 .server {
   display: flex;
-  justify-content: space-around;
-  padding: 20px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 50px 0;
 }
 
 .server h2 {
   color: #1c63ec;
   font-size: 40px;
+  width: 328px;
 }
 
 .brands {
   margin-top: 100px;
   gap: 65px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .principles {
   display: flex;
-  gap: 50px;
+  gap: 15px;
   flex-wrap: wrap;
-  margin-top: 40px;
-  margin-bottom: 80px;
+  margin: 50px 0;
 }
-.principles_right {
+.principles_right,
+.about_right,
+.server_right {
   width: 70%;
 }
 .principles h3 {
   color: #1c63ec;
   font-size: 40px;
+  width: 328px;
 }
 .principles-item {
   border-bottom: 1px solid #353535;
@@ -322,7 +335,7 @@ button {
 .promo {
   border-radius: 50px;
   overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   position: relative;
 }
 .promo_text_left,
@@ -598,6 +611,68 @@ button {
   justify-content: center;
 }
 
+.about_us_company_txt,
+.about_us_company_mini_txt,
+.about_us_company_txt_clients {
+  color: #EBEBEB;
+}
+.about_us_company_mini_txt {
+  display: none;
+}
+
+@media screen and (max-width: 1155px) {
+  #years,
+  #clients {
+    font-size: 60px;
+  }
+
+  .hero .title {
+    font-size: 40px;
+  }
+  .num {
+    justify-content: start;
+  }
+  .first_img img {
+    height: 270px;
+  }
+  .brands div:nth-child(1) img {
+    height: 25px;
+  }
+  .brands div:nth-child(2) img {
+    height: 60px;
+  }
+  .brands div img {
+    height: 40px;
+  }
+  .fourht_section h2 {
+    font-size: 25px;
+  }
+  .cisco {
+    height: 60px;
+  }
+  .fourht_section div:nth-child(2) img {
+    height: 35px;
+  }
+  .fourht_section div:nth-child(3) img {
+    height: 40px;
+  }
+}
+
+
+@media screen and (max-width: 1050px) {
+  .principles-item-header h4 {
+    font-size: 25px;
+  }
+
+  .about_us h2,
+  .num span h1,
+  .third_section h2,
+  .server h2,
+  .principles h3 {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 1038px) {
   .navbar .nav-links {
     display: none;
@@ -625,78 +700,34 @@ button {
     justify-content: space-around;
   }
 }
-
-@media screen and (max-width: 1155px) {
-  #years,
-  #clients {
-    font-size: 60px;
-  }
-  .title {
+@media screen and (max-width: 950px) {
+  .hero .title  {
     text-align: center;
-    font-size: 40px;
   }
-  .about_us h2,
-  .desc span,
-  .num span h1,
-  .third_section h2,
-  .third_section span {
-    font-size: 25px;
-  }
-  .num {
-    justify-content: start;
-  }
-  .first_img img {
-    height: 270px;
-  }
-  .server {
-    justify-content: space-around;
-  }
-  .brands div:nth-child(1) img {
-    height: 25px;
-  }
-  .brands div:nth-child(2) img {
-    height: 60px;
-  }
-  .brands div img {
-    height: 40px;
-  }
-  .fourht_section h2,
-  .desc span {
-    font-size: 25px;
-  }
-  .cisco {
-    height: 60px;
-  }
-  .fourht_section div:nth-child(2) img {
-    height: 35px;
-  }
-  .fourht_section div:nth-child(3) img {
-    height: 40px;
+  .firstDesc {
+    text-align: center;
+    justify-content: center;
   }
 }
-
-@media screen and (max-width: 1140px) {
-  .title {
-    margin-top: 50px;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .principles-item-header h4 {
-    font-size: 25px;
-  }
-
-  .principles h3 {
-    font-size: 30px;
-  }
-}
-
 @media screen and (max-width: 850px) {
+  .brands {
+    margin-top: 35px;
+  }
   .about_us h2,
   .server h2,
   .application h3,
   .footer_inner h3 {
     font-size: 30px;
+  }
+  .about_us_company_txt {
+    display: none;
+  }
+  .about_us_company_mini_txt {
+    display: block;
+  }
+  #years,
+  #clients {
+    font-size: 50px;
   }
   .footer_inner_txt {
     font-size: 16px;
@@ -722,7 +753,9 @@ button {
   .application_text {
     text-align: center;
   }
-  .principles_right {
+  .principles_right,
+  .about_right,
+  .server_right {
     width: 100%;
   }
   .wp_btn,
@@ -751,7 +784,63 @@ button {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar #nav-links.active {
+    display: flex;
+  }
+
+  .navbar .contact-button {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 650px) {
+  .brands{
+    gap: 50px;
+  }
+  .brands img {
+    width: 108px;
+  }
+  #years,
+  #clients {
+    font-size: 37px;
+  }
+  .hero .title  {
+    font-size: 25px;
+  }
+  .firstDesc {
+    font-size: 15px;
+  }
+  .desc span {
+    font-size: 16px;
+  }
+  .text-center {
+    width: 375px;
+  }
+  button.submit-btn {
+    width: 85px;
+    background-position: center;
+    color: transparent;
+  }
+  .feedback {
+    text-align: center;
+    font-size: 12px;
+  }
   .about_us h2,
   .server h2,
   .principles h3,
@@ -786,6 +875,15 @@ button {
 }
 
 @media screen and (max-width: 550px) {
+  .brands{
+    gap: 30px;
+  }
+  .hero .title  {
+    font-size: 19px;
+  }
+  .text-center {
+    width: 275px;
+  }
   .promo_text_right {
     top: 70px;
     font-size: 10px;
