@@ -58,7 +58,14 @@ const toggleBar = () => {
 
 document.getElementById("menuIcon").onclick = toggleBar;
 
-document.getElementById("menuIcon").onclick = toggleBar;
+window.addEventListener("resize", () => {
+  const navLinks = document.getElementById("navLinks");
+  const menuIcon = document.getElementById("menuIcon");
+  if (navLinks.classList.contains("active")) {
+    navLinks.classList.remove("active");
+    menuIcon.classList.remove("active");
+  }
+});
 
 const showAlert = () => {
   document.getElementById("customAlert").classList.add("open");
