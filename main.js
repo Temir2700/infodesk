@@ -40,15 +40,23 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
 });
 
-// document.getElementById("menu-icon").addEventListener("click", function () {
-//
+// const menuBtn = document.querySelector(".menu-icon");
+// menuBtn.addEventListener("click", function () {
+//   menuBtn.classList.toggle("active");
+//   menu.classList.toggle("active");
+//   closeBtn.classList.toggle("menu-btn");
+//   adressBtn.classList.toggle("active");
 // });
 
 const toggleBar = () => {
-  const navLinks = document.getElementById("nav-links");
+  const navLinks = document.getElementById("navLinks");
   navLinks.classList.toggle("active");
-  console.log("fsdfds");
+
+  const menuIcon = document.getElementById("menuIcon");
+  menuIcon.classList.toggle("active");
 };
+
+document.getElementById("menuIcon").onclick = toggleBar;
 
 document.getElementById("menuIcon").onclick = toggleBar;
 
@@ -60,8 +68,6 @@ const closeAlert = () => {
   console.log("here");
   document.getElementById("customAlert").classList.remove("open");
 };
-
-// document.getElementById("closeAlertButton").onclick = closeAlert();
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
