@@ -40,14 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
 });
 
-// const menuBtn = document.querySelector(".menu-icon");
-// menuBtn.addEventListener("click", function () {
-//   menuBtn.classList.toggle("active");
-//   menu.classList.toggle("active");
-//   closeBtn.classList.toggle("menu-btn");
-//   adressBtn.classList.toggle("active");
-// });
-
 const toggleBar = () => {
   const navLinks = document.getElementById("navLinks");
   navLinks.classList.toggle("active");
@@ -78,6 +70,18 @@ const closeAlert = () => {
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
+const phoneInput = document.getElementById("phoneInput");
+const submitBtn = document.querySelector(".submit-btn");
+
+function toggleSubmitButton() {
+  if (phoneInput.value.replace(/\D/g, "").length === 11) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+phoneInput.addEventListener("input", toggleSubmitButton);
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");
@@ -91,12 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
       submitBtn.disabled = !allFilled;
     });
   });
-
-  // form.addEventListener("submit", (event) => {
-  //   event.preventDefault();
-  //   showAlert();
-  //   // Add form submission logic here
-  // });
 });
 
 document
