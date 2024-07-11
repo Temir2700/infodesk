@@ -92,11 +92,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  form.addEventListener("submit", (event) => {
+  // form.addEventListener("submit", (event) => {
+  //   event.preventDefault();
+  //   showAlert();
+  //   // Add form submission logic here
+  // });
+});
+
+document
+  .getElementById("phoneForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
     showAlert();
-    // Add form submission logic here
+
+    const phone = document.getElementById("phoneInput").value;
+
+    emailjs
+      .send("service_mhqbfht", "template_ikxii1c", {
+        phone: phone,
+      })
+      .then(
+        function (response) {
+          document.getElementById("response").innerText =
+            "Сообщение отправлено успешно";
+        },
+        function (error) {
+          document.getElementById("response").innerText =
+            "Ошибка отправки сообщения";
+        }
+      );
   });
-});
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    showAlert();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    emailjs
+      .send("service_mhqbfht", "template_16sfvak", {
+        name: name,
+        phone: phone,
+        email: email,
+        message: message,
+      })
+      .then(
+        function (response) {
+          document.getElementById("response").innerText =
+            "Сообщение отправлено успешно";
+        },
+        function (error) {
+          document.getElementById("response").innerText =
+            "Ошибка отправки сообщения";
+        }
+      );
+  });
 
 document.getElementById("closeAlertButton").onclick = closeAlert;

@@ -6,32 +6,37 @@
     <title>Лендинг</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("L3VhQZj1JG9tqwTml");
+      })();
+    </script>
   </head>
   <body>
     <header>
       <section class="first_section">
         <nav class="navbar">
           <div class="container">
-            <a 
-              href="#" 
-              class="logo"
-              id="logo"
-              >
+            <a href="#" class="logo" id="logo">
               <img src="./img/Logo.svg" alt="Logo" />
             </a>
             <div>
               <ul class="nav-links-desktop">
-              <li>
-                <a href="#section1">О компании</a>
-              </li>
-              <li>
-                <a href="#">Продукты</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-            </div>  
+                <li>
+                  <a href="#section1">О компании</a>
+                </li>
+                <li>
+                  <a href="#">Продукты</a>
+                </li>
+                <li>
+                  <a href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
             <ul id="navLinks" class="nav-links">
               <li>
                 <a href="#section1">О компании</a>
@@ -43,18 +48,14 @@
                 <a href="#">Контакты</a>
               </li>
               <li>
-                <span>
-                  +996 500 580420
-                </span>
-                <span>
-                  infodeskllc@yandex.ru
-                </span>
+                <span> +996 500 580420 </span>
+                <span> infodeskllc@yandex.ru </span>
                 <span>
                   <button>
-                    <img src="img/wp-icon.svg" alt="wp"/>
+                    <img src="img/wp-icon.svg" alt="wp" />
                   </button>
                   <button>
-                    <img src="img/tg-icon.svg"/>
+                    <img src="img/tg-icon.svg" />
                   </button>
                 </span>
               </li>
@@ -82,14 +83,17 @@
                 из США от ведущих мировых брендов
               </span>
             </div>
-            <div class="text-center">
-              <input
-                type="tel"
-                placeholder="Введите номер"
-                class="phone-input"
-              />
-              <button class="submit-btn">Отправить</button>
-            </div>
+            <form id="phoneForm">
+              <div class="text-center">
+                <input
+                  id="phoneInput"
+                  type="tel"
+                  placeholder="Введите номер"
+                  class="phone-input"
+                />
+                <button type="submit" class="submit-btn">Отправить</button>
+              </div>
+            </form>
             <span class="feedback">
               Свяжитесь с нами для получения индивидуального решения!
             </span>
@@ -120,10 +124,10 @@
               >
               <div class="num">
                 <div>
-                  <span 
-                  class="about_us_company_txt">Компания существует с 2010 года</span>
-                  <span 
-                  class="about_us_company_mini_txt">Компании</span>
+                  <span class="about_us_company_txt"
+                    >Компания существует с 2010 года</span
+                  >
+                  <span class="about_us_company_mini_txt">Компании</span>
                   <h1 id="years">0</h1>
                 </div>
                 <div class="separator"></div>
@@ -134,11 +138,17 @@
               </div>
             </div>
             <div class="first_img">
-              <div>
-                <img src="./img/img_1 (1).png" alt="" />
+              <div data-aos="fade-left">
+                <img src="./img/IMG_1.jpg" alt="" />
               </div>
-              <div>
-                <img src="./img/img_2 (1).png" alt="" />
+              <div data-aos="fade-left" class="second_img">
+                <img src="./img/IMG_2.jpg" alt="" />
+              </div>
+              <div data-aos="fade-right" class="third_img">
+                <img src="./img/IMG_3.jpg" alt="" />
+              </div>
+              <div data-aos="fade-right" class="four_img">
+                <img src="./img/IMG_4.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -349,10 +359,10 @@
                 <input
                   class="input_comments"
                   type="text"
-                  id="comments"
+                  id="message"
                   placeholder=" "
                 />
-                <label class="label" for="comments">Ваше сообщение</label>
+                <label class="label" for="message">Ваше сообщение</label>
               </div>
               <button type="submit" id="submitBtn" disabled>Отправить</button>
             </form>
@@ -365,7 +375,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
       <div class="container">
         <div class="footer_inner">
           <div>

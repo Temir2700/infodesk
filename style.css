@@ -14,6 +14,7 @@ html {
 }
 body {
   background-color: #1c1917;
+  cursor: url("./img/Vector.png"), auto;
 }
 .container {
   max-width: 1200px;
@@ -22,7 +23,7 @@ body {
 }
 
 .firstDesc {
-  color: #EBEBEB;
+  color: #ebebeb;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -61,21 +62,26 @@ body {
   justify-content: space-between;
   gap: 10px;
 }
-.nav-links-desktop li {
+.nav-links-desktop {
   list-style: none;
 }
+
+.nav-links-desktop a:hover {
+  color: #1e4dc7;
+}
+
 .nav-links-desktop a {
   text-decoration: none;
-  color: #EBEBEB;
+  color: #ebebeb;
   line-height: 30px;
   font-size: 20px;
 }
 .navbar #navLinks {
   display: none;
   list-style: none;
-  max-height: 0; /* Начальная высота 0 */
-  overflow: hidden; /* Скрываем контент, который не помещается */
-  transition: max-height 1s ease; /* Плавное изменение высоты */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
 }
 
 .navbar #navLinks li {
@@ -87,7 +93,7 @@ body {
 }
 .navbar #navLinks li:last-child span {
   display: block;
-  color: #1E4DC7;
+  color: #1e4dc7;
   font-size: 14px;
   text-align: left;
   margin-bottom: 15px;
@@ -113,7 +119,7 @@ body {
 }
 
 .navbar .contact-button {
-  color: #EBEBEB;
+  color: #ebebeb;
   font-size: 16px;
   background-color: #1e4dc7;
   border-radius: 50px;
@@ -124,6 +130,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contact-button:hover,
+.submit-btn:hover {
+  color: #27272b;
+}
+
+button:hover {
+  color: #27272b;
 }
 
 .menu-icon {
@@ -175,7 +190,7 @@ body {
 }
 
 .first_section {
-  /* background-image: url("./img/img_hero.svg"); */
+  background-image: url("./img/img_hero.png");
   /* background-color: #1c1917; */
 }
 
@@ -216,7 +231,7 @@ button.submit-btn {
   justify-content: center;
   width: 475px;
   border-radius: 50px;
-  background-color: #27272B;
+  background-color: #27272b;
   padding: 5px;
   margin: 40px auto 0;
 }
@@ -225,8 +240,7 @@ button.submit-btn {
   border-radius: 20px;
   width: 270px;
   background-color: transparent;
-  color: 
-  #9A9A9A;
+  color: #9a9a9a;
   padding-left: 20px;
   border: none;
 }
@@ -239,12 +253,12 @@ button.submit-btn {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
 }
-.phone-input:focus-visible{
+.phone-input:focus-visible {
   outline: none;
 }
 
 .feedback {
-  color: #EBEBEB;
+  color: #ebebeb;
   font-size: 13px;
   display: flex;
   align-items: center;
@@ -294,7 +308,7 @@ button {
 }
 
 .desc span {
-  color: #EBEBEB;
+  color: #ebebeb;
   font-size: 28px;
 }
 
@@ -325,9 +339,19 @@ button {
   gap: 30px;
   flex-wrap: wrap;
 }
+
 .first_img img {
   width: 300px;
-  border-radius: 50px;
+  border-radius: 20px;
+}
+
+.second_img img {
+  height: -webkit-fill-available;
+}
+
+.third_img img,
+.four_img img {
+  height: 279px;
 }
 /* third-section */
 
@@ -578,6 +602,11 @@ button {
   cursor: pointer;
   color: #ebebeb;
 }
+
+.footer_list a:hover {
+  color: #1e4dc7;
+}
+
 .footer_info {
   width: 260px;
 }
@@ -681,7 +710,7 @@ button {
 .about_us_company_txt,
 .about_us_company_mini_txt,
 .about_us_company_txt_clients {
-  color: #EBEBEB;
+  color: #ebebeb;
 }
 .about_us_company_mini_txt {
   display: none;
@@ -725,7 +754,6 @@ button {
   }
 }
 
-
 @media screen and (max-width: 1050px) {
   .principles-item-header h4 {
     font-size: 25px;
@@ -762,7 +790,6 @@ button {
     max-height: 500px; /* Максимальная высота, которую может достичь меню */
   }
 
-  
   .navbar .nav-links {
     display: none;
     flex-direction: column;
@@ -777,11 +804,9 @@ button {
   .navbar .nav-links .active {
     display: flex;
   }
-
-
 }
 @media screen and (max-width: 950px) {
-  .hero .title  {
+  .hero .title {
     text-align: center;
   }
   .firstDesc {
@@ -789,7 +814,7 @@ button {
     justify-content: center;
   }
   ..navbar .logo img,
-  .navbar .contact-button  {
+  .navbar .contact-button {
     width: 200px;
     font-size: 14px;
   }
@@ -797,6 +822,14 @@ button {
     font-size: 16px;
   }
 }
+
+@media  screen and (max-width: 940px) {
+  .first_img img{
+    height: 200px;
+    width: 250px;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .navbar .contact-button,
   .navbar .logo img {
@@ -935,7 +968,7 @@ button {
   .about_us h2 {
     width: auto;
   }
-  .brands{
+  .brands {
     gap: 50px;
   }
   .brands img {
@@ -945,7 +978,7 @@ button {
   #clients {
     font-size: 37px;
   }
-  .hero .title  {
+  .hero .title {
     font-size: 25px;
   }
   .firstDesc {
@@ -997,16 +1030,23 @@ button {
     bottom: 0;
     top: 150px;
   }
+  .first_img{
+    display: block;
+    width: 250px;
+  }
+  .first_img div{
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 550px) {
   .second_section {
     margin: 0;
   }
-  .brands{
+  .brands {
     gap: 30px;
   }
-  .hero .title  {
+  .hero .title {
     font-size: 19px;
   }
   .text-center {
