@@ -813,7 +813,7 @@ button {
     text-align: center;
     justify-content: center;
   }
-  ..navbar .logo img,
+  .navbar .logo img,
   .navbar .contact-button {
     width: 200px;
     font-size: 14px;
