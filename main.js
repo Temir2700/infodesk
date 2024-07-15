@@ -64,7 +64,6 @@ const showAlert = () => {
 };
 
 const closeAlert = () => {
-  console.log("here");
   document.getElementById("customAlert").classList.remove("open");
 };
 
